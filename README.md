@@ -11,6 +11,8 @@ Our data contains roughly 3,700,000 entities collected from the popular chess we
 ### Proposed Model:
 _Link to referenced model: https://erikbern.com/2014/11/29/deep-learning-for-chess.html_ 
 
+_Link to chess library for python: https://python-chess.readthedocs.io/en/latest/_
+
 The model we will use is a two to three layer neural network. The model will resemble the above link but will include fewer layers to reduce strain on performance during training. We will initially attempt a less wide 3 layer architecture and if this is too resource intensive, we will attempt a shallower architecture. The input vector will include serialized input from the current board state and will perform matrix multiplication in an architecture of dense layers using ReLU. This serialized version of the gamestate will be the most important data transformation in our model as understanding how the model is understanding the chess board is important for understanding our architecture. It is also going to be the most resource intensive part of our input and therefore optimizing it will increase the feasible size of our project. The final hidden layer will condense the output into a single value that indicates which move is the best possible move in that given board state. We intend to work closely with the architecture of our dense layers to achieve the highest accuracy in comparison with Stockfish, while keeping the model’s training resources feasible. 
 
 ### Timeline (in weeks):
